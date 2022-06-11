@@ -10,14 +10,14 @@ class Todos:
             self.todos = []
 
     def all(self):
-        return self.todos
+        return self.todos["todos"]
 
     def get(self, id):
-        return self.todos[id]
+        return self.todos["todos"][id]
 
     def create(self, data):
         data.pop('csrf_token')
-        self.todos.append(data)
+        self.todos["todos"].append(data)
 
     def save_all(self):
         with open("todos.json", "w") as f:
@@ -25,7 +25,7 @@ class Todos:
 
     def update(self, id, data):
         data.pop('csrf_token')
-        self.todos[id] = data
+        self.todos["todos"][id] = data
         self.save_all()
 
 

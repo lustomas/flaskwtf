@@ -1,7 +1,14 @@
-{"todos" : [
+[
     {
-        "title": "Zakupy",
-        "description": "Mleko, jajka, mąka, olej, papier toaletowy (jak będzie)",
-        "done": "False"
+      "id": 1,
+      "title": "Lekcja angielskiego",
+      "description": "Czasowniki regularne",
+      "done": false
+    },
+    {
+      "id": 2,
+      "title": "Python",
+      "description": "Dekoratory",
+      "done": false
     }
-]}
+  ]
