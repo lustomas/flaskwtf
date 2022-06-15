@@ -2,19 +2,21 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Tu tworzymy todo i widzimy listę</title>
+    <title>Wydatki</title>
     <style>
-        table, th, tr, td {border: 1px solid black;}
+        h2 {font-size: 30px; margin: auto}
+        input {font-size: 15px; margin: auto}
+       table, th, tr, td, input {border: 1px solid black;font-size: 20px;margin: 5px}
     </style>
 </head>
 
-<h2>Lista zadań</h2>
+<h2>Lista wydatków</h2>
 
 <table>
     <thead>
     <th>Tytuł</th>
     <th>Opis</th>
-    <th>Czy zrobione?</th>
+    <th>Czy zapłacone?</th>
     </thead>
 {% for todo in todos %}
     <tr>
@@ -24,8 +26,9 @@
     </tr>
 {% endfor %}
 </table>
+<br> </br>
 <div>
-    <h2> Dodaj nowe zadanie: </h2>
+    <h2> Dodaj nowy wydatek: </h2>
     <form method="POST" action="/todos/">
         {{ form.hidden_tag() }}
         <table>
